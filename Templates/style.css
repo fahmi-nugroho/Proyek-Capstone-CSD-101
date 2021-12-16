@@ -131,3 +131,11 @@ button:hover {
   display: flex;
   justify-content: space-between;
 }
+
+.results {
+  background-color: #edf0f1;
+  width: 600px;
+  height: 400px;
+  text-align: center;
+  position: inline-block;
+}
