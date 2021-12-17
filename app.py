@@ -51,12 +51,16 @@ def submit():
 
     hasil = model.predict(data)
     
-    prediksi = "Positif" if hasil[0] == 1 else "Negative"
+    prediksi = "Positif" if hasil[0][0] <= hasil[0][1] else "Negative"
 
     if prediksi == "Positif":
-        return render_template("result-pos.html", n = nama)
+        persentase = hasil[0][1] * 100
+        data = [nama, persentase]
+        return render_template("result-pos.html", d = data)
     else:
-        return render_template("result-neg.html", n = nama)
+        persentase = hasil[0][0] * 100
+        data = [nama, persentase]
+        return render_template("result-neg.html", d = data)
 
 if __name__ == "__main__":
     app.run(debug=True)
