@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.png') }}" />
+    <title>Diabecheck!</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}" />
+  </head>
+
+  <body>
+    <header>
+      <h2><a href="#home">DIABECHECK!</a></h2>
+      <nav>
+        <ul class="nav-link">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="#quiz"><button>Start Now!</button></a>
+    </header>
+    <div class="hero" id="home">
+      <div class="hero-heading">
+        <h1>Segera Cek Kesehatan Anda!</h1>
+        <p class="hero-text">Adanya pandemi Covid-19 membuat orang dengan diabetes beresiko lebih besar jika dibandingkan orang yang sehat.</p>
+        <button class="btn-mulai"><a href="#quiz">Yuk Coba!</a></button>
+      </div>
+    </div>
+    <div class="question" id="quiz">
+      <h1>Quisioner</h1>
+      <form action="/sub" method="POST">
+        <div class="text">
+          <label for="nama">Nama</label><br />
+          <input type="text" id="nama" name="nama" required />
+        </div>
+        <div class="text">
+          <label for="umur">Umur</label><br />
+          <input type="text" id="umur" name="umur" required />
+        </div>
+        <div class="radio">
+          <input type="radio" id="laki-laki" name="jenis_kelamin" value="1" required />
+          <label for="laki-laki">Laki-laki</label>
+          <input type="radio" id="perempuan" name="jenis_kelamin" value="0" />
+          <label for="perempuan">Perempuan</label>
+        </div>
+        <p>Centang jika anda merasakan salah satu gejala dibawah :</p>
+        <div class="gejala">
+          <div class="row1">
+            <div class="form-checkbox">
+              <input type="checkbox" id="polyuria" name="polyuria" value="1" />
+              <label for="vehicle1">Sering Buang Air Kecil</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="polydipsia" name="polydipsia" value="1" />
+              <label for="polydipsia">Banyak Minum</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="penurunanBB" name="penurunanBB" value="1" />
+              <label for="penurunanBB">Penurunan Berat Badan secara drastis</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="lemas" name="lemas" value="1" />
+              <label for="lemas">Lemas</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="nafsuMakan" name="nafsuMakan" value="1" />
+              <label for="nafsuMakan">Nafsu Makan Berlebih</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="infeksiKelamin" name="infeksiKelamin" value="1" />
+              <label for="infeksiKelamin">Infeksi Kelamin</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="pandangan" name="pandangan" value="1" />
+              <label for="pandangan">Pandangan Kabur</label>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="form-checkbox">
+              <input type="checkbox" id="gatal" name="gatal" value="1" />
+              <label for="gatal">Rasa Gatal Berlebih</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="mood" name="mood" value="1" />
+              <label for="mood">Perubahan Mood</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="penyembuhan" name="penyembuhan" value="1" />
+              <label for="penyembuhan">Proses Penyembuhan Yang Lama</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="gerakanBadan" name="gerakanBadan" value="1" />
+              <label for="gerakanBadan">Melemahnya Gerakan Badan</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="otot" name="otot" value="1" />
+              <label for="otot">Kakunya Otot</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="rambut" name="rambut" value="1" />
+              <label for="rambut">Kerontokan Rambut</label>
+            </div>
+            <div class="form-checkbox">
+              <input type="checkbox" id="obesitas" name="obesitas" value="1" />
+              <label for="obesitas">Obesitas</label>
+            </div>
+          </div>
+        </div>
+        <button>Diagnosa!</button>
+      </form>
+    </div>
+    <div class="about"></div>
+    <footer></footer>
+  </body>
+</html>
