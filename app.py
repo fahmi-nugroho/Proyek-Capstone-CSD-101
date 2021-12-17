@@ -49,7 +49,7 @@ def submit():
         obesitas
     )
 
-    hasil = model.predict(data)
+    hasil = model.predict_proba(data)
     
     prediksi = "Positif" if hasil[0][0] <= hasil[0][1] else "Negative"
 
