@@ -141,7 +141,7 @@ button:hover {
 }
 
 .result {
-  width: 700px;
+  width: 60%;
   height: auto;
   display: inline-block;
   background-color: #edf0f1;
@@ -155,4 +155,3 @@ button:hover {
   font-size: 24px;
   color: #24252a;
 }
-
