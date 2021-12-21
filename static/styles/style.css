@@ -163,3 +163,31 @@ footer {
   text-align: center;
   padding: 15px;
 }
+
+@media screen and (max-width: 576px) {
+  header nav ul {
+    display: none;
+  }
+
+  .hero .hero-heading {
+    padding-top: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero .hero-heading {
+    width: 100%;
+    padding-right: 10%;
+  }
+
+  .question {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
+  .question .gejala {
+    display: block;
+  }
+}
