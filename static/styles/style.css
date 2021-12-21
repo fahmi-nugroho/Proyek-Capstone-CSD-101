@@ -108,6 +108,8 @@ button:hover {
 
 .question {
   padding: 20px 20%;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .question h1 {
@@ -154,4 +156,10 @@ button:hover {
   font-weight: bolder;
   font-size: 24px;
   color: #24252a;
+}
+
+footer {
+  background-color: #24252a;
+  text-align: center;
+  padding: 15px;
 }
